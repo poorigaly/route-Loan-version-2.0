@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from "@angular/forms";
 import { Router } from '@angular/router';
+import { SecondComponent } from './second.component'; 
 
 
 @Component({
@@ -38,7 +39,7 @@ export class FirstComponent {
   }
 
   /*########### Template Driven Form ###########*/
-  onSubmit() {
+ /* onSubmit() {
     this.isSubmitted = true;
     if (!this.registrationForm.valid) {
       return false;
@@ -46,8 +47,10 @@ export class FirstComponent {
      // alert(JSON.stringify(this.registrationForm.value))
          this.router.navigate(['/Second']);
     }
-  }
-
+  }*/
+ onSubmit() {
+         this.router.navigate(['/Second']);
+    }
 }
 
 
