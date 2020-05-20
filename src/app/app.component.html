@@ -1,0 +1,53 @@
+<div class="jumbotron text-center">
+	<h1 class="display-5">
+		Type of Loan
+	</h1>
+</div>
+
+<div class="container">
+	<div class="row custom-wrapper">
+		<div class="col-md-12">
+
+			<!-- Form starts -->
+			<form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+				<div class="group-gap">
+					<div class="d-block my-3">
+
+          <div class="mb-3">
+            <select class="custom-select" (change)="changeLoan($event)" formControlName="LoanName">
+              <option value="">Choose your Loan</option>
+              <option *ngFor="let Loan of Loan" [ngValue]="Loan">{{Loan}}</option>
+            </select>
+
+            <!-- error block -->
+            <div class="invalid-feedback" *ngIf="isSubmitted && LoanName.errors?.required">
+              <sup>*</sup>Please select the loan type
+            </div>
+          </div>            
+
+          </div>
+        </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="btn btn-danger btn-lg btn-block">Submit</button>
+
+
+          <button type="submit" class="btn btn-danger btn-lg btn-block">Navigate</button>
+      </form><!-- Form ends -->
+
+    </div>
+  </div>
+</div>
+
+
+
+<h1>Angular Router App</h1>
+<!-- This nav gives you links to click, which tells the router which route to use (defined in the routes constant in  AppRoutingModule) -->
+<nav>
+  <ul>
+    <li><a routerLink="/First" routerLinkActive="active">First Component</a></li>
+    <li><a routerLink="/Second" routerLinkActive="active">Second Component</a></li>
+  </ul>
+</nav>
+<!-- The routed views render in the <router-outlet>-->
+<router-outlet></router-outlet>
