@@ -17,7 +17,7 @@ export class FirstComponent {
   // Loan Names
   Loan: any = ['Personal', 'Vehicle', 'Gold']
 
-  constructor(public fb: FormBuilder, router : Router) {}
+  constructor(public fb: FormBuilder,private router : Router) {}
 
   /*########### Form ###########*/
   registrationForm = this.fb.group({
