@@ -2,8 +2,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router'; // CLI imports router
 import { AppComponent } from './app.component';
+import { FirstComponent } from './first.component';
 
-const routes: Routes = []; // sets up routes constant where you define your routes
+ const routes: Routes = [
+  { path: 'first-component', component: FirstComponent }
+]; // sets up routes constant where you define your routes
 
 // configures NgModule imports and exports
 @NgModule({
@@ -12,8 +15,5 @@ const routes: Routes = []; // sets up routes constant where you define your rout
 })
 export class AppRoutingModule { 
 
-
-  const routes: Routes = [
-  { path: 'first-component', component: AppComponent }
-];
+ 
 }
